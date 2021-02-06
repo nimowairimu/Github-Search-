@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GithubProfileComponent } from './github-profile.component';
+import { PagenotfoundComponent } from './pagenotfound.component';
 
-describe('GithubProfileComponent', () => {
-  let component: GithubProfileComponent;
-  let fixture: ComponentFixture<GithubProfileComponent>;
+describe('PagenotfoundComponent', () => {
+  let component: PagenotfoundComponent;
+  let fixture: ComponentFixture<PagenotfoundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GithubProfileComponent ]
+      declarations: [ PagenotfoundComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GithubProfileComponent);
+    fixture = TestBed.createComponent(PagenotfoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

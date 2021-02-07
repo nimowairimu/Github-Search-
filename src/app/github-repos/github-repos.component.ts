@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from 'src/app/github-service/profile.service';
-import { Repos } from '../repos';
+import { Repos } from '../repos'
 
 @Component({
   selector: 'app-github-repos',

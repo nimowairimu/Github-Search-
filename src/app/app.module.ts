@@ -9,7 +9,8 @@ import { GithubUsernameComponent } from './github-username/github-username.compo
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProfileService } from './github-service/profile.service';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SearchUserComponent } from './search-user/search-user.component'
+import { SearchUserComponent } from './search-user/search-user.component';
+import { HighlightDirective } from './highlight.directive'
   
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SearchUserComponent } from './search-user/search-user.component'
     PagenotfoundComponent,
     NavbarComponent,
     SearchUserComponent,
+    HighlightDirective,
 
   ],
   imports: [

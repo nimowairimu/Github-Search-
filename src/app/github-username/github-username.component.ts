@@ -9,15 +9,15 @@ import { Repos } from '../repos';
   styleUrls: ['./github-username.component.css']
 })
 export class GithubUsernameComponent implements OnInit {
-  user: Users;
-  repo: Repos;
+  users: Users;
+  repos: Repos;
   constructor(public myService: ProfileService, private repoService: ProfileService) {
   }
 
   search(searchName) {
     this.myService.searchUSer(searchName).then(
       (success)=>{
-        this.user = this.myService.foundUser;
+        this.users = this.myService.foundUser;
       },
       (error)=>{
         console.log(error)
@@ -25,8 +25,8 @@ export class GithubUsernameComponent implements OnInit {
     );
       this.repoService.getReopos(searchName).then(
         (results)=>{
-          this.repo =this.repoService.allRepos
-          console.log(this.repo);
+          this.repos =this.repoService.allRepos
+          console.log(this.repos);
         },
         (error)=>{
           console.log(error);
@@ -35,7 +35,7 @@ export class GithubUsernameComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.search('Owiti-Charles');
+    this.search('nimowairimu');
   }
 }
 

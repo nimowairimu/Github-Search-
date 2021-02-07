@@ -5,5 +5,4 @@ import { GithubReposComponent } from './github-profile/github-repos;
 import {  PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
-})
 export class AppRoutingModule { }

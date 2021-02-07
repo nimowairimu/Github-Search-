@@ -9,12 +9,12 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class ProfileService {
-  foundUser: User;
+  foundUser: Users;
   allRepos: Repos;
  
 
   constructor(private http: HttpClient) {
-    this.foundUser = new User("","","","",0,0,0,"",new Date);
+    this.foundUser = new Users("","","","",0,0,0,"",new Date);
     this.allRepos = new Repos("","","",new Date,0,0,"");
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserserviceService} from '../userservice.service';
+import { ProfileService } from 'src/app/github-service/profile.service';
 import { Repos } from '../repos';
 
 @Component({
@@ -10,12 +10,12 @@ import { Repos } from '../repos';
 export class GithubReposComponent implements OnInit {
 
   repo: Repos;
-  constructor( public repoService: UserserviceService ) { }
+  constructor( public repoService: ProfileService ) { }
 
   repoSearch(searchName){
-    this.repoService.getReopos(searchName).then(
+    this.repoService.getRepos(searchName).then(
       (results)=>{
-        this.repo =this.repoService.allRepos
+        this.repo =this.repoService.Repos
         console.log(this.repo);
       },
       (error)=>{
@@ -25,10 +25,7 @@ export class GithubReposComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.repoSearch('Owiti-Charles');
+    this.repoSearch('nimowairimu');
   }
- 
-}
-
  
 }

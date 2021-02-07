@@ -18,15 +18,15 @@ export class GithubUsernameComponent implements OnInit {
   search(searchName) {
     this.myService.userRequest(searchName).then(
       (success)=>{
-        this.users = this.myService.foundUser;
+        this.users = this.myService.User;
       },
       (error)=>{
         console.log(error)
       }
     );
-      this.repoService.getReopos(searchName).then(
+      this.repoService.getRepos(searchName).then(
         (results)=>{
-          this.repos =this.repoService.allRepos
+          this.repos =this.repoService.Repos
           console.log(this.repos);
         },
         (error)=>{

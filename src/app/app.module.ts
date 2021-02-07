@@ -8,7 +8,8 @@ import { GithubReposComponent } from './github-profile/github-repos/github-repos
 import { GithubUsernameComponent } from './github-username/github-username.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProfileService } from './github-service/profile.service';
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { SearchUserComponent } from './search-user/search-user.component'
   
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component'
     GithubUsernameComponent,
     PagenotfoundComponent,
     NavbarComponent,
+    SearchUserComponent,
 
   ],
   imports: [

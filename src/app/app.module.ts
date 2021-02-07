@@ -10,7 +10,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProfileService } from './github-service/profile.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchUserComponent } from './search-user/search-user.component';
-import { HighlightDirective } from './highlight.directive'
+import { HighlightDirective } from './highlight.directive';
+import { Date=pipePipe } from './date=pipe.pipe'
   
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HighlightDirective } from './highlight.directive'
     NavbarComponent,
     SearchUserComponent,
     HighlightDirective,
+    Date=pipePipe,
 
   ],
   imports: [

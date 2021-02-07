@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../github-service/profile.service';
 import {Users} from '../users';
 import { Repos } from '../repos';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-github-username',
@@ -11,11 +12,11 @@ import { Repos } from '../repos';
 export class GithubUsernameComponent implements OnInit {
   users: Users;
   repos: Repos;
-  constructor(public myService: ProfileService, private repoService: ProfileService) {
+  constructor(public myService: ProfileService, private repoService: ProfileService,private http:HttpClient) {
   }
 
   search(searchName) {
-    this.myService.searchUSer(searchName).then(
+    this.myService.userRequest(searchName).then(
       (success)=>{
         this.users = this.myService.foundUser;
       },

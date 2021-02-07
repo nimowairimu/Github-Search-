@@ -20,7 +20,7 @@ export class ProfileService {
 
   userRequest(searchName: string) {
    
-    interface Response {
+    interface ApiResponse{
       url:string,
       login: string;
       html_url:string;
@@ -32,8 +32,8 @@ export class ProfileService {
       created_at:Date;
     }
 
-    let Promise = new Promise((resolve, reject) => {
-      this.http.get<Response>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiKey).toPromise().then(
+    let Promise = new Promise((resolve, reject) =>{
+      this.http.get<ApiResponse>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiKey).toPromise().then(
         (result) => {
           this.User = result;
           console.log(this.User);
@@ -65,7 +65,7 @@ export class ProfileService {
         },
         (error) => {
           console.log(error);
-          reject();
+          reject(error);
         }
       );
     });

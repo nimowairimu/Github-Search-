@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../github-service/profile.service';
 import {Users} from '../users';
-import { Repos } from '../repos'
-import { HttpClient } from '@angular/common/http';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-github-username',
@@ -10,36 +8,22 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./github-username.component.css']
 })
 export class GithubUsernameComponent implements OnInit {
-  users: Users;
-  repos: Repos;
-  constructor(public myService: ProfileService, private repoService: ProfileService,private http:HttpClient) {
+  users:Users[];
+  searchUserName(username){
+   this.httpServiceService.findUser(username).then(
+     ()=>{
+       this.users = this.httpServiceService.users;
+       console.log(this.users);
+     },
+     (error)=>{
+       console.log(error)
+     }
+   )
   }
-
-  search(searchName) {
-    this.myService.userRequest(searchName).then(
-      (success)=>{
-        this.users = this.myService.User;
-      },
-      (error)=>{
-        console.log(error)
-      }
-    );
-      this.repoService.getRepos(searchName).then(
-        (results)=>{
-          this.repos =this.repoService.Repos
-          console.log(this.repos);
-        },
-        (error)=>{
-          console.log(error);
-        }
-      );
-  }
+  constructor(public httpServiceService:HttpServiceService) { }
 
   ngOnInit() {
-    this.search('nimowairimu');
+    this.searchUserName('Christine-N-Mwaura');
   }
+
 }
-
-
-
-

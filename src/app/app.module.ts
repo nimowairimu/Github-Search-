@@ -11,7 +11,8 @@ import { ProfileService } from './github-service/profile.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchUserComponent } from './search-user/search-user.component';
 import { HighlightDirective } from './highlight.directive';
-import { DatePipePipe } from './date-pipe.pipe'
+import { DatePipePipe } from './date-pipe.pipe';
+import { SearchComponent } from './search/search.component'
   
 
 @NgModule({
@@ -24,6 +25,7 @@ import { DatePipePipe } from './date-pipe.pipe'
     SearchUserComponent,
     HighlightDirective,
     DatePipePipe,
+    SearchComponent,
 
   ],
   imports: [

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../github-service/profile.service';
 import {Users} from '../users';
-import { Repos } from '../repos';
+import { Repos } from '../repos'
 import { HttpClient } from '@angular/common/http';
 
 @Component({

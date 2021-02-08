@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-github-username',
-  templateUrl: './github-username.component.html',
+  templateUrl: '../github-username.component.html',
   styleUrls: ['./github-username.component.css']
 })
 export class GithubUsernameComponent implements OnInit {

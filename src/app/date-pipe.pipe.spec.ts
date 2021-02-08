@@ -1,8 +1,8 @@
-import { Date=pipePipe } from './date=pipe.pipe';
+import { Date=pipePipe } from './date-pipe.pipe';
 
 describe('Date=pipePipe', () => {
   it('create an instance', () => {
-    const pipe = new Date=pipePipe();
+    const pipe = new Date-pipePipe();
     expect(pipe).toBeTruthy();
   });
 });

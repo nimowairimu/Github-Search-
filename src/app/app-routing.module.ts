@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubUsernameComponent } from './github-username/github-username.component';
-import { GithubReposComponent } from './github-profile/github-repos/github-repos.component';
+import { GithubReposComponent } from './github-repos/github-repos.component';
 import {  PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes=[

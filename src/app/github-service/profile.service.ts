@@ -32,12 +32,12 @@ export class ProfileService {
       created_at:Date;
     }
 
-    let Promise = new Promise((resolve, reject) =>{
+    return new Promise((resolve, reject) => {
       this.http.get<ApiResponse>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiKey).toPromise().then(
         (result) => {
           this.User = result;
           console.log(this.User);
-          resolve()
+          resolve();
         },
         (error) => {
           console.log(error);
@@ -59,7 +59,7 @@ export class ProfileService {
     return new Promise((resolve,reject)=>{
       this.http.get<Repos>('https://api.github.com/users/'+searchName+"/repos?order=created&sort=asc?access_token="+environment.apiKey).toPromise().then(
         (results) => {
-          this.Repos = results
+          this.Repos = results;
 
           resolve()
         },

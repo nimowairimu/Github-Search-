@@ -23,7 +23,7 @@ export class GithubUsernameComponent implements OnInit {
   constructor(public httpServiceService:HttpServiceService) { }
 
   ngOnInit() {
-    this.searchUserName('Christine-N-Mwaura');
+    this.searchUserName('nimowairimu');
   }
 
 }

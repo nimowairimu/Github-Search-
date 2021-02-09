@@ -8,24 +8,20 @@ import { Repos } from '../repos'
   styleUrls: ['./github-repos.component.css']
 })
 export class GithubReposComponent implements OnInit {
+  myRepos:Repos[];
+  constructor(public repoService:ProfileService) { }
 
-  repo: Repos;
-  constructor( public repoService: ProfileService ) { }
+  findRepo(username){
+    this.repoService.getRepoInfo(username).subscribe(data =>{
+      this.myRepos = data;
+      console.log(this.myRepos)
 
-  repoSearch(searchName){
-    this.repoService.getRepos(searchName).then(
-      (results)=>{
-        this.repo =this.repoService.Repos
-        console.log(this.repo);
-      },
-      (error)=>{
-        console.log(error);
-      }
-    );
+    })
   }
-
   ngOnInit() {
-    this.repoSearch('nimowairimu');
+    this.findRepo('nimowairimu');
   }
- 
+
+
 }
+

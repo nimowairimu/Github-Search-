@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Users } from '../users';
-import { Repos } from '../repos'
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
 
@@ -17,6 +15,6 @@ token = '?access_token=' + environment.apiKey;
   }
 
   getRepoInfo(username: string): Observable<any> {
-    return this.http.get(this._URL + username + '/repos' +  this.token)
+    return this.http.get(this.URL + username + '/repos' +  this.token)
   }
 }

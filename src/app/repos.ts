@@ -1,5 +1,9 @@
 export class Repos {
-  constructor(public name:string,public html_url:string ,public description:string, public created_at:Date
-    , public forks:number,public watchers_count:number, public language:string){
-  }
-} 
+  description: any;
+name:any;
+owner:any;
+watchers:any;
+forks:any;
+default_branch: any;
+language: any;
+}
